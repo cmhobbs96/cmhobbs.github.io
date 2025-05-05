@@ -113,3 +113,26 @@ li {
   font-style: italic;
   color: #555;
 }
+
+/* --- Education entries --- */
+.education-entry {
+  margin-bottom: 1em;
+}
+
+/* --- Numbered list for Research Papers --- */
+.numbered-list {
+  list-style: none;
+  counter-reset: paper;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.numbered-list li {
+  counter-increment: paper;
+  margin-bottom: 0.5em;
+}
+
+.numbered-list li::before {
+  content: "[" counter(paper) "] ";
+  font-weight: bold;
+}
